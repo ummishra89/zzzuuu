@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mentorz.activities.CommentActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imgBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingBottom="@dimen/dp10"
+                    android:paddingRight="@dimen/dp50"
+                    android:paddingTop="@dimen/dp10"
+                    android:src="@drawable/back" />
+
+                <com.mentorz.customviews.CustomTextView
+                    android:id="@+id/txtTitle"
+                    style="@style/TextStyleXLarge.White"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/comments"
+                    app:fontName="@string/roboto_bold" />
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+        <RelativeLayout
+            android:id="@+id/notificationLayout"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:background="@color/light_gray1"
+            android:layout_below="@+id/app_bar"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/dp80">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_thumbnail"
+                android:layout_width="50dip"
+                android:layout_height="50dip"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/default_avatar"
+                app:civ_border_color="@color/light_gray"
+                app:civ_border_width="1dp" />
+
+            <!-- Description -->
+
+            <com.mentorz.customviews.CustomTextView
+                android:id="@+id/text"
+                style="@style/TextStyleMedium.Black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp20"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_toRightOf="@+id/img_thumbnail"
+                android:textColor="@color/cardview_dark_background"
+                android:textStyle="bold"
+                android:typeface="sans"
+                app:fontName="@string/roboto_medium"
+                tools:text="gcvcvcvcv" />
+        </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layoutBottom"
+        android:layout_below="@+id/notificationLayout">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <RelativeLayout
+        android:id="@+id/layoutBottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp55"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorAccent">
+
+        <com.mentorz.customviews.CustomEditText
+            android:id="@+id/edtComment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/dp7"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_marginRight="@dimen/dp15"
+            android:layout_marginTop="@dimen/dp7"
+            android:layout_toLeftOf="@+id/txtPost"
+            android:background="@color/white"
+            android:padding="@dimen/dp7" />
+
+        <com.mentorz.customviews.CustomTextView
+            android:id="@+id/txtPost"
+            style="@style/TextStyleXLarge.White"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp15"
+            android:text="@string/post" />
+
+    </RelativeLayout>
+
+    <com.mentorz.customviews.CustomTextView
+        android:id="@+id/emptyMessage"
+        style="@style/TextStyleLarge.LightGray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/be_the_first_to_comment"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

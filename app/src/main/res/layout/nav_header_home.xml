@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/dp70"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <RelativeLayout
+        android:id="@+id/rEditProfile"
+        android:layout_width="@dimen/dp117"
+        android:layout_height="@dimen/dp117"
+        android:layout_centerHorizontal="true">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profileImage"
+            android:layout_width="@dimen/dp110"
+            android:layout_height="@dimen/dp110"
+            android:layout_centerInParent="true"
+            android:paddingTop="@dimen/nav_header_vertical_spacing"
+            android:src="@drawable/default_avatar"
+
+            />
+
+        <ImageView
+            android:layout_width="@dimen/dp25"
+            android:layout_height="@dimen/dp25"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/dp5"
+            android:layout_marginRight="@dimen/dp5"
+            android:background="@drawable/white_circular_shape"
+            android:padding="@dimen/dp2"
+            android:src="@drawable/edit_img" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_below="@+id/rEditProfile"
+        android:layout_marginTop="@dimen/dp50"
+        android:background="@color/light_gray" />
+
+</RelativeLayout>

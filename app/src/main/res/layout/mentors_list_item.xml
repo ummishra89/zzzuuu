@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="1dp"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="horizontal">
+
+    <!-- Left Thumbnail image -->
+
+    <RelativeLayout
+        android:id="@+id/mainContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/r1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/dp80">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_thumbnail"
+                android:layout_width="50dip"
+                android:layout_height="50dip"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/default_avt_sq"
+                app:civ_border_color="@color/light_gray"
+                app:civ_border_width="1dp" />
+
+            <!-- Description -->
+
+            <TextView
+
+                android:id="@+id/name"
+                style="@style/TextStyleLarge.LightGray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/img_thumbnail"
+                android:layout_toRightOf="@+id/img_thumbnail"
+                android:textColor="@color/cardview_dark_background"
+                android:typeface="sans"
+                tools:text="" />
+
+            <!-- Author -->
+
+            <TextView
+                android:id="@+id/basic_info"
+                style="@style/TextStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/name"
+                android:layout_alignStart="@+id/name"
+                android:layout_below="@+id/name"
+                android:textColor="@color/light_gray"
+                tools:ignore="SmallSp"
+                tools:text="" />
+
+            <TextView
+                android:id="@+id/txtExpertise"
+                style="@style/TextStyleMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/name"
+                android:layout_alignStart="@+id/name"
+                android:layout_below="@+id/basic_info"
+                android:layout_marginBottom="@dimen/dp10"
+                android:layout_marginRight="@dimen/dp20"
+                android:layout_toLeftOf="@+id/imgMatchAdd"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textColor="@color/light_gray"
+                tools:ignore="SmallSp"
+                tools:text="" />
+
+            <com.mentorz.customviews.CustomTextView
+                android:id="@+id/price_charge"
+                style="@style/TextStyleMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/name"
+                android:layout_marginRight="@dimen/dp10"
+                android:background="@drawable/sky_background"
+                android:paddingBottom="@dimen/dp3"
+                android:paddingLeft="@dimen/dp20"
+                android:paddingRight="@dimen/dp20"
+                android:paddingTop="@dimen/dp3"
+                android:text="free"
+                android:textColor="#4DB6AC" />
+
+            <ImageView
+                android:id="@+id/imgMatchAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/price_charge"
+                android:layout_marginBottom="@dimen/dp5"
+                android:layout_marginRight="@dimen/dp5"
+                android:layout_marginTop="@dimen/dp10"
+                android:background="@drawable/match_add_selector"
+                android:padding="@dimen/dp10"
+                android:paddingRight="@dimen/dp5" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layoutBottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/r1">
+
+            <LinearLayout
+                android:id="@+id/l1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp5"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_marginRight="@dimen/dp10"
+                android:layout_marginTop="@dimen/dp12"
+                android:orientation="horizontal">
+
+                <com.mentorz.customviews.CustomTextView
+                    android:id="@+id/txtFollowers"
+                    style="@style/TextStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:text="@string/followers"
+                    android:textColor="@color/light_gray" />
+
+                <com.mentorz.customviews.CustomTextView
+                    android:id="@+id/txtExperience"
+                    style="@style/TextStyleSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="@string/yr_of_experience"
+                    android:textColor="@color/light_gray" />
+
+                <RatingBar
+                    android:id="@+id/rating"
+                    style="@style/ratingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:backgroundTint="@color/rating_color"
+                    android:numStars="5"
+                    android:progressDrawable="@drawable/rating_bar" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/l1"
+                android:background="@color/light_gray1"
+                android:paddingTop="@dimen/dp10">
+
+                <com.mentorz.customviews.CustomEditText
+                    android:id="@+id/edtAbout"
+                    style="@style/TextStyleMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp60"
+                    android:layout_margin="@dimen/dp10"
+                    android:background="@color/white"
+                    android:gravity="top"
+                    android:hint="@string/tell_about"
+                    android:padding="@dimen/dp5" />
+
+                <com.mentorz.customviews.CustomTextView
+                    android:id="@+id/sendRequest"
+                    style="@style/TextStyleMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edtAbout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/dp10"
+                    android:background="@color/white"
+                    android:paddingBottom="@dimen/dp5"
+                    android:paddingLeft="@dimen/dp20"
+                    android:paddingRight="@dimen/dp20"
+                    android:paddingTop="@dimen/dp5"
+                    android:text="@string/send_mentor_request"
+                    android:textColor="@drawable/red_grey_selector1"
+                    app:fontName="@string/roboto_regular" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

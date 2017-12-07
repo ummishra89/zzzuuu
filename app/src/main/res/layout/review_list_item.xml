@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="1dp"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="horizontal">
+
+    <!-- Left Thumbnail image -->
+
+    <RelativeLayout
+        android:id="@+id/mainContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/r1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/dp80">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_thumbnail"
+                android:layout_width="@dimen/dp50"
+                android:layout_height="@dimen/dp50"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/default_avatar"
+                app:civ_border_color="@color/light_gray"
+                app:civ_border_width="1dp" />
+
+            <!-- Description -->
+
+            <com.mentorz.customviews.CustomTextView
+                android:id="@+id/txtName"
+                style="@style/TextStyleMedium.Black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/img_thumbnail"
+                android:layout_marginLeft="@dimen/dp15"
+                android:layout_toRightOf="@+id/img_thumbnail"
+                android:textColor="@color/cardview_dark_background"
+                android:textStyle="bold"
+                android:typeface="sans"
+                app:fontName="@string/roboto_medium"
+                tools:text="gcvcvcvcv" />
+
+            <!-- Author -->
+
+
+            <com.mentorz.customviews.CustomTextView
+                android:id="@+id/txtTimeStamp"
+                style="@style/TextStyleSmall"
+                android:drawableLeft="@drawable/time"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/txtName"
+                android:layout_alignStart="@+id/txtName"
+                android:layout_below="@+id/txtName"
+                android:layout_marginBottom="@dimen/dp10"
+                android:layout_marginRight="@dimen/dp20"
+                android:layout_toLeftOf="@+id/imgDelete"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textColor="@color/light_gray"
+                app:fontName="@string/roboto_regular"
+                tools:ignore="SmallSp" />
+
+            <RatingBar
+                android:id="@+id/rating"
+                style="@style/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/txtTimeStamp"
+                android:layout_below="@+id/txtName"
+                android:layout_marginRight="@dimen/dp100"
+                android:layout_alignParentRight="true"
+                android:backgroundTint="@color/rating_color"
+                android:numStars="5"
+                android:progressDrawable="@drawable/rating_bar" />
+
+            <com.mentorz.customviews.CustomTextView
+                android:id="@+id/txtReview"
+                style="@style/TextStyleMedium.Black"
+                android:layout_width="wrap_content"
+                android:layout_below="@id/txtTimeStamp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp80"
+                android:layout_marginRight="@dimen/dp10"
+                android:textColor="@color/cardview_dark_background"
+                android:textStyle="bold"
+                android:typeface="sans"
+                android:textSize="@dimen/sp12"
+                app:fontName="@string/roboto_medium"
+                tools:text="gcvcvcvcv" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

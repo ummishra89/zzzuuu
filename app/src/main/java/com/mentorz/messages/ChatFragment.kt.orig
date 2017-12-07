@@ -1,0 +1,192 @@
+package com.mentorz.messages
+
+
+import android.content.BroadcastReceiver
+import android.content.Context
+import android.content.Intent
+import android.content.IntentFilter
+import android.graphics.Color
+import android.os.Bundle
+import android.support.v4.app.Fragment
+import android.view.*
+import com.facebook.share.model.AppInviteContent
+import com.facebook.share.widget.AppInviteDialog
+import com.mentorz.MentorzApplication
+import com.mentorz.R
+import com.mentorz.extensions.hideProgressBar
+import com.mentorz.extensions.showProgressBar
+import com.mentorz.fragments.BaseFragment
+import com.mentorz.listener.OnLoadMoreListener
+import com.mentorz.manager.WrapContentLinearLayoutManager
+import com.mentorz.match.UserListItem
+import com.mentorz.messages.adapter.MyMentorMenteeDelegateAdapter
+import com.mentorz.messages.adapter.MyMentorMenteeListAdapter
+import com.mentorz.userdetails.UserDetailsPresenterImpl
+import com.mentorz.userdetails.UserDetailsView
+import com.mentorz.utils.Constant
+import kotlinx.android.synthetic.main.fragment_chat.*
+
+/**
+ * A simple [Fragment] subclass.
+ */
+<<<<<<< HEAD
+class ChatFragment : BaseFragment(), UserDetailsView, View.OnClickListener, ChatUserDelegateAdapter.onViewSelectedListener {
+=======
+class ChatFragment : BaseFragment(),UserDetailsView, View.OnClickListener, MyMentorMenteeDelegateAdapter.onViewSelectedListener {
+>>>>>>> 4b210c2f2bb5eff6a4ebab246084b5404edd7d3a
+
+    override fun networkError() {
+        super.networkError()
+    }
+
+    override fun updateAdapter() {
+        activity?.runOnUiThread {
+            adapter?.notifyDataSetChanged()
+        }
+    }
+
+    override fun dataSetChanged() {
+        activity?.runOnUiThread {
+            adapter?.notifyDataSetChanged()
+        }
+    }
+
+    override fun onClick(p0: View?) {
+        when (p0?.id) {
+            txtFindMentor.id -> {
+                if (activity is HomeTabClickListener) {
+                    val listener = activity as HomeTabClickListener
+                    listener.onClickMatch(null)
+                }
+            }
+            layoutInviteFriends.id -> {
+                val appLinkUrl: String = "https://www.mydomain.com/myapplink"
+                val previewImageUrl: String = "https://www.mydomain.com/my_invite_image.jpg"
+
+                if (AppInviteDialog.canShow()) {
+                    val content = AppInviteContent.Builder()
+                            .setApplinkUrl(appLinkUrl)
+                            .setPreviewImageUrl(previewImageUrl)
+                            .build()
+                    AppInviteDialog.show(this, content)
+                }
+            }
+
+        }
+    }
+
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setHasOptionsMenu(true)
+        val intentFilter =  IntentFilter()
+        intentFilter.addAction(Constant.ACTION_BLOCK)
+        activity?.registerReceiver(receiver,intentFilter)
+
+    }
+
+    var receiver = object : BroadcastReceiver(){
+        override fun onReceive(p0: Context?, intent: Intent?) {
+            when(intent?.action){
+                Constant.ACTION_BLOCK ->{
+                    adapter?.removeUserChatByUserId(intent.getLongExtra("user_id",0))
+                }
+            }
+        }
+
+    }
+
+
+    override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        txtFindMentor.setOnClickListener(this)
+        layoutInviteFriends.setOnClickListener(this)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {
+        inflater?.inflate(R.menu.message_menu, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        return super.onOptionsItemSelected(item)
+    }
+
+    override fun showProgress() {
+        activity?.showProgressBar(progressBar)
+    }
+
+    override fun noUserFound() {
+        activity?.runOnUiThread {
+            swipeToRefresh?.isRefreshing = false
+            adapter?.removeLoaderFromBottom()
+        }
+    }
+
+    override fun setChatUserAdapter(userList: MutableList<UserListItem>) {
+        activity?.runOnUiThread {
+            if (pageNo == 0) {
+                swipeToRefresh?.isRefreshing = false
+                adapter?.clearAndMentors(userList)
+            } else {
+                adapter?.addMentors(userList)
+
+            }
+        }
+    }
+
+    override fun hideProgress() {
+        activity?.hideProgressBar(progressBar)
+    }
+
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
+                              savedInstanceState: Bundle?): View? {
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_chat, container, false)
+    }
+
+    var presenter = UserDetailsPresenterImpl(this)
+<<<<<<< HEAD
+    var adapter: ChatUserListAdapter? = null
+    var friendId: Long = 0
+    var pageNo: Int = 0
+=======
+    var adapter: MyMentorMenteeListAdapter?=null
+    var friendId:Long=0
+    var pageNo:Int=0
+>>>>>>> 4b210c2f2bb5eff6a4ebab246084b5404edd7d3a
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        friendId = activity.intent.getLongExtra("friend_id", 0)
+        recyclerView.apply {
+            setHasFixedSize(true)
+            val linearLayout = WrapContentLinearLayoutManager(activity)
+            layoutManager = linearLayout
+        }
+<<<<<<< HEAD
+        adapter = ChatUserListAdapter(rChatList, rEmptyChat, activity, recyclerView, this)
+=======
+        adapter = MyMentorMenteeListAdapter(rChatList,rEmptyChat,activity,recyclerView,this)
+>>>>>>> 4b210c2f2bb5eff6a4ebab246084b5404edd7d3a
+        recyclerView.adapter = adapter
+        adapter!!.setOnLoadMoreListener(object : OnLoadMoreListener {
+            override fun onLoadMore() {
+                adapter!!.addLoaderAtBottom()
+                presenter.getChatUsers(MentorzApplication.instance?.prefs?.getUserId()!!, ++pageNo, false)
+            }
+        })
+        presenter.getChatUsers(MentorzApplication.instance?.prefs?.getUserId()!!, 0, false)
+        swipeToRefresh.setOnRefreshListener {
+            swipeToRefresh.isRefreshing = true
+            pageNo = 0
+            presenter.getChatUsers(MentorzApplication.instance?.prefs?.getUserId()!!, pageNo, true)
+        }
+        swipeToRefresh.setColorSchemeColors(Color.RED, Color.BLUE, Color.CYAN)
+
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        activity?.unregisterReceiver(receiver)
+    }
+
+}

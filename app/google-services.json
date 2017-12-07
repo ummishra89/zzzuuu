@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "276892747020",
+    "firebase_url": "https://mentorz-1304.firebaseio.com",
+    "project_id": "mentorz-1304",
+    "storage_bucket": "mentorz-1304.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:276892747020:android:36514a35c1a01b97",
+        "android_client_info": {
+          "package_name": "com.mentorz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "276892747020-i8oeaq3b4dogs0p2tdqg8avqonommals.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mentorz",
+            "certificate_hash": "a06b767e2876bd9eb8d1419a94e3c50a27b92f85"
+          }
+        },
+        {
+          "client_id": "276892747020-lg5li69ilm667blg6ssnr4cnnl3eqahk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASo4fV2ha3JhNjMZQVuwuJIHeaqAyVvhY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "276892747020-o92476jb2qu2jbcdtqd36d9l6lhhqa7p.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mentorz"
+              }
+            },
+            {
+              "client_id": "276892747020-lg5li69ilm667blg6ssnr4cnnl3eqahk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

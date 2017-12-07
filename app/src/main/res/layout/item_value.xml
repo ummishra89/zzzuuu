@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dp8"
+    android:layout_marginLeft="@dimen/dp8"
+    android:background="@drawable/rounded_corner_selector"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingBottom="@dimen/dp10"
+        android:paddingLeft="@dimen/dp15"
+        android:paddingRight="@dimen/dp10"
+        android:paddingTop="@dimen/dp10">
+
+        <com.mentorz.customviews.CustomTextView
+            android:id="@+id/ctv_value"
+            style="@style/TextStyleMedium.White"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/com_facebook_send_button_text"
+            android:textColor="@drawable/text_selector" />
+
+        <ImageView
+            android:id="@+id/iv_tick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/dp6"
+            android:src="@drawable/tick_selector" />
+
+    </LinearLayout>
+</LinearLayout>

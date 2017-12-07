@@ -1,0 +1,171 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_bg"
+    tools:context="com.mentorz.fragments.login.LoginFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp40"
+            android:src="@drawable/logo" />
+
+        <com.mentorz.customviews.CustomTextView
+            style="@style/TextStyleMedium.White"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp22"
+            android:gravity="center"
+            android:text="@string/login_via"
+            app:fontName="@string/roboto_regular" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp20"
+            android:layout_marginTop="@dimen/dp10"
+            android:orientation="horizontal">
+
+            <com.mentorz.customviews.CustomTextView
+                android:id="@+id/ctv_facebook"
+                style="@style/CustomButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp8"
+                android:layout_weight="1"
+                android:background="@drawable/ripple_facebook_button"
+                android:gravity="center"
+                android:paddingBottom="@dimen/dp15"
+                android:paddingTop="@dimen/dp15"
+                android:text="@string/facebook"
+                app:fontName="@string/roboto_regular" />
+
+            <com.mentorz.customviews.CustomTextView
+                android:id="@+id/ctv_linkedin"
+                style="@style/CustomButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/ripple_linkedin_button"
+                android:gravity="center"
+                android:paddingBottom="@dimen/dp15"
+                android:paddingTop="@dimen/dp15"
+                android:text="@string/linkedin"
+                app:fontName="@string/roboto_regular" />
+        </LinearLayout>
+
+        <com.mentorz.customviews.CustomTextView
+            style="@style/TextStyleMedium.White"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/dp25"
+            android:text="@string/or"
+            app:fontName="@string/roboto_regular" />
+
+        <com.mentorz.customviews.CustomEditText
+            android:id="@+id/et_email"
+            style="@style/TextStyleMedium.EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp10"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp20"
+            android:background="@drawable/rounded_corner_edittext"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:textColorHint="@color/hint_color"
+            app:fontName="@string/roboto_regular" />
+
+        <com.mentorz.customviews.CustomEditText
+            android:id="@+id/et_password"
+            style="@style/TextStyleMedium.EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp10"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp20"
+            android:background="@drawable/rounded_corner_edittext"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:textColorHint="@color/hint_color"
+            app:fontName="@string/roboto_regular" />
+
+        <com.mentorz.customviews.CustomTextView
+            android:id="@+id/ctv_login"
+            style="@style/CustomButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp25"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp20"
+            android:background="@drawable/ripple_button"
+            android:gravity="center"
+            android:text="@string/login"
+            app:fontName="@string/roboto_regular" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <com.mentorz.customviews.CustomTextView
+                style="@style/TextStyleSmall.White"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp5"
+                android:text="@string/forgot_password"
+                app:fontName="@string/roboto_regular" />
+
+            <com.mentorz.customviews.CustomTextView
+                android:id="@+id/ctv_forgot_password"
+                style="@style/TextStyleSmall.ColorAccent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/click_here"
+                app:fontName="@string/roboto_regular" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="@dimen/dp25"
+        android:orientation="horizontal">
+
+        <com.mentorz.customviews.CustomTextView
+            style="@style/TextStyleSmall.White"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dp5"
+            android:text="@string/new_here"
+            app:fontName="@string/roboto_regular" />
+
+        <com.mentorz.customviews.CustomTextView
+            android:id="@+id/ctv_signup"
+            style="@style/TextStyleSmall.ColorAccent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/signup"
+            app:fontName="@string/roboto_regular" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+</FrameLayout>

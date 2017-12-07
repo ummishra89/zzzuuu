@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="1dp"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="horizontal">
+
+    <!-- Left Thumbnail image -->
+
+    <RelativeLayout
+        android:id="@+id/mainContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/r1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/dp80">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profileImage"
+                android:layout_width="50dip"
+                android:layout_height="50dip"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/default_avatar"
+                app:civ_border_color="@color/light_gray"
+                app:civ_border_width="1dp" />
+
+            <!-- Description -->
+
+            <com.mentorz.customviews.CustomTextView
+                android:layout_marginLeft="@dimen/dp5"
+                android:id="@+id/txtName"
+                android:layout_centerVertical="true"
+                style="@style/TextStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/profileImage"
+                android:textColor="@color/gray_dark"
+                android:textStyle="bold"
+                android:typeface="sans"
+                app:fontName="@string/roboto_medium"
+                tools:text="gcvcvcvcv" />
+
+            <!-- Author -->
+
+
+            <com.mentorz.customviews.CustomTextView
+                android:textColor="#4DB6AC"
+                android:text="@string/unblock"
+                android:background="@drawable/sky_background"
+                android:id="@+id/unBlock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/price_charge"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="@dimen/dp5"
+                android:layout_marginRight="@dimen/dp5"
+                android:layout_marginTop="@dimen/dp10"
+                android:paddingTop="@dimen/dp5"
+                android:paddingBottom="@dimen/dp5"
+                android:paddingLeft="@dimen/dp10"
+                android:paddingRight="@dimen/dp10"
+                 />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

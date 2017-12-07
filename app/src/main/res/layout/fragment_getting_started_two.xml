@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/dp25"
+        android:layout_marginTop="@dimen/dp25"
+        android:src="@drawable/loading_data_logo" />
+
+    <com.mentorz.customviews.CustomTextView
+        style="@style/TextStyleXXLarge.White"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp20"
+        android:layout_marginRight="@dimen/dp20"
+        android:text="@string/thank_you_for_letting_us_know"
+        android:textAlignment="center"
+        app:fontName="@string/roboto_medium" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/loading_data_2" />
+    </FrameLayout>
+
+    <com.mentorz.customviews.CustomTextView
+        style="@style/TextStyleXXLarge.White"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp30"
+        android:layout_marginLeft="@dimen/dp20"
+        android:layout_marginRight="@dimen/dp20"
+        android:text="@string/finding_people_with"
+        android:textAlignment="center"
+        app:fontName="@string/roboto_medium" />
+</LinearLayout>

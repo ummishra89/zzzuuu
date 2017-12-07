@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray1"
+    tools:context="com.mentorz.activities.FeedbackActivity">
+
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/toolbar_with_title" />
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/app_bar"
+        android:layout_marginLeft="@dimen/dp15"
+        android:layout_marginRight="@dimen/dp15">
+
+        <com.mentorz.customviews.CustomTextView
+            android:id="@+id/header_desc"
+            style="@style/TextStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/dp20"
+            android:layout_marginTop="@dimen/dp30"
+            android:text="@string/would_you_recommend_mentorz_to_a_friend_or_colleague" />
+
+        <com.mentorz.customviews.CustomTextView
+            android:id="@+id/txt_not_at_all"
+            style="@style/TextStyleMedium.LightGray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/header_desc"
+            android:text="@string/not_at_all_likely"
+            android:textColor="@color/colorAccent" />
+
+        <com.mentorz.customviews.CustomTextView
+            android:id="@+id/txt_extermely_likey"
+            style="@style/TextStyleMedium.LightGray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/header_desc"
+            android:text="@string/extremely_likely"
+            android:textColor="@color/colorAccent" />
+
+        <LinearLayout
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp50"
+            android:layout_below="@+id/txt_not_at_all"
+            android:layout_marginTop="@dimen/dp10"
+            android:background="@color/light_gray"
+            android:orientation="horizontal"
+            android:padding="0.1dp"
+            android:weightSum="10">
+
+            <TextView
+                android:id="@+id/t1"
+                style="@style/TextStyleXLarge"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_weight="1"
+                android:background="@drawable/feedback_rating_bg_selector"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="@drawable/white_grey_selector" />
+
+            <TextView
+                android:id="@+id/t2"
+                style="@style/TextStyleXLarge"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/feedback_rating_bg_selector"
+                android:gravity="center"
+                android:text="2"
+                android:textColor="@drawable/white_grey_selector" />
+
+            <TextView
+                android:id="@+id/t3"
+                style="@style/TextStyleXLarge"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/feedback_rating_bg_selector"
+                android:gravity="center"
+                android:text="3"
+                android:textColor="@drawable/white_grey_selector" />
+
+            <TextView
+                android:id="@+id/t4"
+                style="@style/TextStyleXLarge"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/feedback_rating_bg_selector"
+                android:gravity="center"
+                android:text="4"
+                android:textColor="@drawable/white_grey_selector" />
+
+            <TextView
+                android:id="@+id/t5"
+                style="@style/TextStyleXLarge"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/feedback_rating_bg_selector"
+                android:gravity="center"
+                android:text="5"
+                android:textColor="@drawable/white_grey_selector" />
+
+            <TextView
+                android:id="@+id/t6"
+                style="@style/TextStyleXLarge"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/feedback_rating_bg_selector"
+                android:gravity="center"
+                android:text="6"
+                android:textColor="@drawable/white_grey_selector" />
+
+            <TextView
+                android:id="@+id/t7"
+                style="@style/TextStyleXLarge"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/feedback_rating_bg_selector"
+                android:gravity="center"
+                android:text="7"
+                android:textColor="@drawable/white_grey_selector" />
+
+            <TextView
+                android:id="@+id/t8"
+                style="@style/TextStyleXLarge"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/feedback_rating_bg_selector"
+                android:gravity="center"
+                android:text="8"
+                android:textColor="@drawable/white_grey_selector" />
+
+            <TextView
+                android:id="@+id/t9"
+                style="@style/TextStyleXLarge"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/feedback_rating_bg_selector"
+                android:gravity="center"
+                android:text="9"
+                android:textColor="@drawable/white_grey_selector" />
+
+            <TextView
+                android:id="@+id/t10"
+                style="@style/TextStyleXLarge"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/feedback_rating_bg_selector"
+                android:gravity="center"
+                android:text="10"
+                android:textColor="@drawable/white_grey_selector" />
+
+
+        </LinearLayout>
+
+        <com.mentorz.customviews.CustomTextView
+            android:id="@+id/feedback_title"
+            style="@style/TextStyleMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/recyclerView"
+            android:layout_marginTop="@dimen/dp30"
+            android:text="@string/Feedback" />
+
+        <com.mentorz.customviews.CustomEditText
+            android:id="@+id/edtFeedback"
+            style="@style/TextStyleMedium"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp100"
+            android:layout_below="@+id/feedback_title"
+            android:layout_marginTop="@dimen/dp10"
+            android:background="@drawable/rounded_corner_edittext"
+            android:gravity="top"
+            android:hint="@string/feedback_hint"
+            android:padding="@dimen/dp5" />
+
+        <com.mentorz.customviews.CustomTextView
+            android:id="@+id/sendFeedback"
+            style="@style/CustomButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp45"
+            android:layout_below="@+id/edtFeedback"
+            android:layout_marginTop="@dimen/dp30"
+            android:background="@drawable/ripple_button"
+            android:gravity="center"
+            android:text="@string/send_feedback"
+            android:textAllCaps="true"
+            android:textColorHint="@color/white"
+            app:fontName="@string/roboto_regular" />
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+</RelativeLayout>

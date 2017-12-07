@@ -1,0 +1,111 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray1"
+    android:paddingLeft="@dimen/dp25"
+    android:paddingRight="@dimen/dp25"
+    tools:context="com.mentorz.match.BeMentorFragment">
+
+
+    <RelativeLayout
+        android:id="@+id/lExpertise"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp45"
+        android:layout_marginTop="@dimen/dp100"
+        android:background="@color/white">
+
+
+        <com.mentorz.customviews.CustomTextView
+            android:id="@+id/txtExpertise"
+            style="@style/TextStyleLarge.Black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp10"
+            android:hint="@string/select_expertise"
+            app:fontName="@string/roboto_light" />
+
+
+        <com.mentorz.customviews.CustomTextView
+
+            android:id="@+id/txtExpertiseCountDesc"
+            style="@style/TextStyleLarge.Black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp10"
+            android:layout_toLeftOf="@+id/imgNext"
+            android:layout_toRightOf="@+id/txtExpertise"
+            android:gravity="right"
+            android:text=""
+            app:fontName="@string/roboto_light" />
+
+        <ImageView
+            android:id="@+id/imgNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp10"
+            android:clickable="false"
+            android:src="@drawable/next" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/lEditProfile"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp45"
+        android:layout_below="@+id/lExpertise"
+        android:layout_marginTop="@dimen/dp30"
+        android:background="@color/white">
+
+        <com.mentorz.customviews.CustomTextView
+            android:text=""
+            android:id="@+id/txtTitleOrOccupation"
+            style="@style/TextStyleLarge.Black"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp10"
+            android:hint="@string/edit_profile"
+            app:fontName="@string/roboto_light" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp10"
+            android:clickable="false"
+            android:src="@drawable/next" />
+
+    </RelativeLayout>
+
+
+    <com.mentorz.customviews.CustomTextView
+
+        android:id="@+id/btnSubmit"
+        style="@style/CustomButton"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp45"
+        android:layout_below="@+id/lEditProfile"
+        android:layout_marginTop="@dimen/dp50"
+        android:background="@drawable/ripple_button"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:textColorHint="@color/white"
+        app:fontName="@string/roboto_regular" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

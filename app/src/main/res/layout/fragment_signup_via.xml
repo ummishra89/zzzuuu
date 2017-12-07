@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_bg">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dp70"
+            android:src="@drawable/logo" />
+
+        <com.mentorz.customviews.CustomTextView
+            style="@style/TextStyleMedium.White"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp40"
+            android:gravity="center"
+            android:text="@string/sign_up_via"
+            app:fontName="@string/roboto_regular" />
+
+        <com.mentorz.customviews.CustomTextView
+            android:id="@+id/ctv_facebook"
+            style="@style/CustomButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp20"
+            android:layout_marginTop="@dimen/dp20"
+            android:background="@drawable/ripple_facebook_button"
+            android:gravity="center"
+            android:text="@string/facebook" />
+
+        <com.mentorz.customviews.CustomTextView
+            android:id="@+id/ctv_linkedin"
+            style="@style/CustomButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp20"
+            android:layout_marginTop="@dimen/dp10"
+            android:background="@drawable/ripple_linkedin_button"
+            android:gravity="center"
+            android:text="@string/linkedin" />
+
+        <com.mentorz.customviews.CustomTextView
+            style="@style/TextStyleMedium.White"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/dp25"
+            android:text="@string/or"
+            app:fontName="@string/roboto_regular" />
+
+        <com.mentorz.customviews.CustomTextView
+            android:id="@+id/ctv_email"
+            style="@style/CustomButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp20"
+            android:layout_marginTop="@dimen/dp10"
+            android:background="@drawable/ripple_button"
+            android:gravity="center"
+            android:text="@string/signup_via_email" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp25"
+            android:orientation="horizontal">
+
+            <com.mentorz.customviews.CustomTextView
+                style="@style/TextStyleSmall.White"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp5"
+                android:text="@string/already_register"
+                app:fontName="@string/roboto_regular" />
+
+            <com.mentorz.customviews.CustomTextView
+                android:id="@+id/ctv_login"
+                style="@style/TextStyleSmall.ColorAccent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login"
+                app:fontName="@string/roboto_regular" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+</FrameLayout>

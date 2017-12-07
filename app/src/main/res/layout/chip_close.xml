@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center">
+
+    <FrameLayout
+
+        android:id="@android:id/content"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp35"
+        android:background="@drawable/chip_selector">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:paddingLeft="6dp">
+
+            <com.mentorz.customviews.CustomTextView
+                android:id="@android:id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:singleLine="false"
+                android:text="snmdbddndb"
+                android:textColor="#000000"
+                app:fontName="@string/roboto_regular" />
+
+            <ImageView
+                android:id="@+id/imgTick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp5"
+                android:layout_marginRight="@dimen/dp5"
+                android:layout_toRightOf="@android:id/text1"
+                android:background="@drawable/red_white_tick_selector" />
+
+            <com.mentorz.customviews.CustomTextView
+                android:id="@android:id/closeButton"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp35"
+                android:layout_toRightOf="@+id/imgTick"
+                android:background="@drawable/gray_dark_rounded_corner"
+                android:paddingLeft="@dimen/dp10"
+                android:paddingRight="@dimen/dp10"
+                android:text="+"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp23" />
+        </RelativeLayout>
+    </FrameLayout>
+</FrameLayout>

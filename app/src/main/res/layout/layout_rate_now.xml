@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:id="@+id/rootView"
+    android:background="@color/transparent_50">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginEnd="@dimen/dp30"
+        android:layout_marginStart="@dimen/dp30"
+        android:background="@color/white"
+        android:elevation="@dimen/dp10"
+        android:orientation="vertical">
+
+        <com.mentorz.customviews.CustomTextView
+            android:id="@+id/ctv_title"
+            style="@style/TextStyleXLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_marginRight="@dimen/dp10"
+            android:layout_marginTop="@dimen/dp10"
+            android:gravity="center"
+            android:text="@string/title"
+            android:textAlignment="center"
+            android:textColor="@color/gray_dark"
+            app:fontName="@string/roboto_regular" />
+        <com.mentorz.customviews.CustomTextView
+            android:id="@+id/rating_desc"
+            style="@style/TextStyleMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp10"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_marginRight="@dimen/dp10"
+            android:layout_marginTop="@dimen/dp5"
+            android:gravity="center_horizontal"
+            android:text="@string/your_rating_is_valuable_to_us"
+            android:textAlignment="center"
+            app:fontName="@string/roboto_regular" />
+        <RatingBar
+            android:layout_marginTop="@dimen/dp10"
+            android:id="@+id/rating"
+            style="@style/big_ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="@color/rating_color"
+            android:numStars="5"
+            />
+
+        <com.mentorz.customviews.CustomEditText
+
+            android:padding="@dimen/dp10"
+            android:id="@+id/edtComment"
+            style="@style/TextStyleMedium.Black"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp45"
+            android:layout_marginBottom="@dimen/dp20"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_marginRight="@dimen/dp10"
+            android:layout_marginTop="@dimen/dp20"
+            android:gravity="top"
+            android:background="@drawable/gray_shape"
+            android:hint="@string/enter_your_comment_hare"
+            app:fontName="@string/roboto_regular" />
+
+        <com.mentorz.customviews.CustomTextView
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_marginRight="@dimen/dp10"
+            android:id="@+id/submit"
+            style="@style/CustomButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:text="@string/submit"
+            android:textAlignment="center"
+            android:textAllCaps="true" />
+        <com.mentorz.customviews.CustomTextView
+        android:id="@+id/notNow" android:layout_gravity="right"
+        style="@style/TextStyleMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp10"
+        android:gravity="right"
+        android:text="@string/not_now"
+        android:textAlignment="center"
+        app:fontName="@string/roboto_regular" />
+
+    </LinearLayout>
+</RelativeLayout>

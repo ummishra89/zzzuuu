@@ -1,0 +1,338 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/r1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp250"
+        android:background="@color/cardview_dark_background">
+
+        <ImageView
+            android:id="@+id/imgBackground"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp250"
+            android:alpha="0.3"
+            android:scaleType="fitXY" />
+
+        <RatingBar
+            android:id="@+id/rating"
+            style="@style/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp10"
+            android:backgroundTint="@color/rating_color"
+            android:numStars="5"
+            android:progressDrawable="@drawable/rating_bar" />
+
+        <ImageView
+            android:id="@+id/popup_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/dp15"
+            android:paddingLeft="@dimen/dp30"
+            android:paddingRight="@dimen/dp20"
+            android:paddingBottom="@dimen/dp15"
+            android:src="@drawable/extra"
+            android:visibility="visible" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgProfile"
+            android:layout_width="@dimen/dp70"
+            android:layout_height="@dimen/dp70"
+            android:layout_below="@+id/rating"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp10"
+            android:src="@drawable/default_avatar" />
+
+        <com.mentorz.customviews.CustomTextView
+            android:id="@+id/name"
+            style="@style/TextStyleMedium.White"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgProfile"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp10"
+            app:fontName="@string/roboto_regular" />
+
+        <com.mentorz.customviews.CustomTextView
+            android:id="@+id/headline"
+            style="@style/TextStyleMedium.White"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp7"
+            app:fontName="@string/roboto_regular" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/headline"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp10">
+
+            <com.mentorz.customviews.CustomTextView
+                android:id="@+id/txtExpertise"
+                style="@style/TextStyleMedium.White"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fontName="@string/roboto_regular" />
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/review"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:padding="@dimen/dp10"
+            android:src="@drawable/review" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/review"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/dp5"
+            android:gravity="center_horizontal">
+
+            <com.mentorz.customviews.CustomTextView
+
+                android:id="@+id/followFollowing"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp30"
+                android:layout_marginRight="@dimen/dp5"
+                android:background="@drawable/white_red_bg_selector"
+                android:gravity="center_vertical"
+                android:paddingBottom="@dimen/dp3"
+                android:paddingLeft="@dimen/dp20"
+                android:paddingRight="@dimen/dp20"
+                android:paddingTop="@dimen/dp3"
+                android:text="Follow"
+                android:textColor="@drawable/white_gray_text_selector"
+                android:textSize="@dimen/sp12"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/lSendRequest"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp30"
+                android:layout_toRightOf="@+id/followFollowing"
+                android:background="@drawable/white_red_bg_selector"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/dp3"
+                android:paddingLeft="@dimen/dp5"
+                android:paddingRight="@dimen/dp15"
+                android:paddingTop="@dimen/dp3"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/imgMatch"
+                    android:layout_width="@dimen/dp20"
+                    android:layout_height="@dimen/dp18" />
+
+                <com.mentorz.customviews.CustomTextView
+                    android:id="@+id/sendRequest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp10"
+                    android:gravity="center_vertical"
+                    android:textColor="@drawable/red_white_text_selector"
+                    android:textSize="@dimen/sp12"
+                    android:visibility="visible" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/imgVideo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/review"
+            android:layout_alignParentRight="true"
+            android:padding="@dimen/dp10"
+            android:src="@drawable/play"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <LinearLayout
+
+        android:id="@+id/lBottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp53"
+        android:layout_below="@+id/r1"
+        android:layout_marginBottom="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginRight="1dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <RelativeLayout
+            android:id="@+id/rFollowers"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/txtFollowersCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp5"
+                android:src="@drawable/like"
+                android:text="0"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp16" />
+
+            <com.mentorz.customviews.CustomTextView
+                android:id="@+id/txtFollowers"
+                style="@style/TextStyleMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtFollowersCount"
+                android:layout_centerHorizontal="true"
+                android:text="@string/follower" />
+
+            <View
+                android:layout_width="0.1dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@color/light_gray" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rFollowing"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/txtFollowingCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp5"
+                android:src="@drawable/like"
+                android:text="0"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp16" />
+
+            <com.mentorz.customviews.CustomTextView
+                android:id="@+id/txtFollowing"
+                style="@style/TextStyleMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtFollowingCount"
+                android:layout_centerHorizontal="true"
+                android:text="@string/following" />
+
+            <View
+                android:layout_width="0.1dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@color/light_gray" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rMentors"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/txtMentorsCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp5"
+                android:src="@drawable/like"
+                android:text="0"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp16" />
+
+            <com.mentorz.customviews.CustomTextView
+                android:id="@+id/txtMentor"
+                style="@style/TextStyleMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtMentorsCount"
+                android:layout_centerHorizontal="true"
+                android:text="@string/mentor" />
+
+            <View
+                android:layout_width="0.1dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@color/light_gray" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rMentee"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/txtMenteeCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp5"
+                android:text="0"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp16" />
+
+            <com.mentorz.customviews.CustomTextView
+                android:id="@+id/txtMentee"
+                style="@style/TextStyleMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtMenteeCount"
+                android:layout_centerHorizontal="true"
+                android:text="@string/mentee" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/layoutSendRequest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lBottom"
+        android:background="@color/light_gray1"
+        android:paddingTop="@dimen/dp10"
+        android:visibility="gone">
+
+        <com.mentorz.customviews.CustomEditText
+            android:id="@+id/edtAbout"
+            style="@style/TextStyleMedium"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp60"
+            android:layout_margin="@dimen/dp10"
+            android:background="@color/white"
+            android:gravity="top"
+            android:hint="@string/tell_about"
+            android:padding="@dimen/dp5" />
+
+        <com.mentorz.customviews.CustomTextView
+            android:id="@+id/btnSendRequest"
+            style="@style/TextStyleMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edtAbout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/dp10"
+            android:background="@color/white"
+            android:paddingBottom="@dimen/dp5"
+            android:paddingLeft="@dimen/dp20"
+            android:paddingRight="@dimen/dp20"
+            android:paddingTop="@dimen/dp5"
+            android:text="@string/send_mentor_request"
+            android:textColor="@drawable/red_white_text_selector"
+            app:fontName="@string/roboto_regular" />
+
+    </RelativeLayout>
+</RelativeLayout>

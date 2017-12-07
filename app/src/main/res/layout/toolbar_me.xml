@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbarMe"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="?attr/colorPrimary"
+    app:popupTheme="@style/AppTheme.PopupOverlay">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="@dimen/dp100"
+            android:layout_height="@dimen/dp20"
+            android:layout_centerInParent="true"
+            android:background="@drawable/logo"
+            android:text="Title" />
+
+        <com.mentorz.customviews.CustomTextView
+            android:id="@+id/txtDone"
+            style="@style/TextStyleLarge.White"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:background="@drawable/edit1"
+            android:padding="@dimen/dp10"
+            android:text="@string/done"
+            app:fontName="@string/roboto_bold" />
+    </RelativeLayout>
+</android.support.v7.widget.Toolbar>

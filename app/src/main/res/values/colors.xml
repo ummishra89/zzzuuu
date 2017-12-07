@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#F43334</color>
+    <color name="colorPrimaryDark">#F43334</color>
+    <color name="colorAccent">#F43334</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="light_gray">#a9a9a9</color>
+    <color name="background">#f0eff5</color>
+
+    <color name="gray_dark">#535252</color>
+    <color name="facebook_button_color">#2e4588</color>
+    <color name="linkedin_button_color">#135087</color>
+    <color name="login_button_color">#001e78</color>
+    <color name="login">#6a46cc</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="hint_color">#878787</color>
+    <color name="transparent_70">#4cffffff</color>
+    <color name="transparent_50">#3c0a0909</color>
+    <color name="light_gray1">#F2F2F1</color>
+    <color name="sinch_purple">#ff63029d</color>
+    <color name="off_white">#fffafafa</color>
+    <color name="greyish">#fff2f1f2</color>
+    <color name="rating_color">#ffc800</color>
+    <color name="unread_notification">#ff9db9</color>
+
+
+    <!--Bottom tabs-->
+    <color name="colorBottomNavigationPrimary">#3F51B5</color>
+    <color name="colorBottomNavigationPrimaryDark">#303F9F</color>
+    <color name="colorBottomNavigationAccent">#F43334</color>
+    <color name="colorBottomNavigationInactive">#747474</color>
+    <color name="colorBottomNavigationDisable">#3A000000</color>
+    <color name="colorBottomNavigationActiveColored">#FFFFFF</color>
+    <color name="colorBottomNavigationInactiveColored">#50FFFFFF</color>
+    <color name="colorBottomNavigationSelectedBackground">#17000000</color>
+    <color name="colorBottomNavigationNotification">#F63D2B</color>
+
+</resources>

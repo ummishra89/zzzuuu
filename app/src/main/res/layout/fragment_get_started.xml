@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_bg"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/dp25"
+        android:layout_marginTop="@dimen/dp25"
+        android:src="@drawable/loading_data_logo" />
+
+    <com.mentorz.customviews.CustomTextView
+        android:id="@+id/ctv_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp20"
+        android:layout_marginRight="@dimen/dp20"
+        android:text="@string/com_facebook_send_button_text"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp25"
+        app:fontName="@string/roboto_regular" />
+
+    <com.mentorz.customviews.CustomTextView
+        android:id="@+id/ctv_get_started"
+        style="@style/TextStyleXXLarge.White"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dp50"
+        android:background="@drawable/rounded_corner_white_border"
+        android:text="@string/get_started"
+        app:fontName="@string/roboto_regular" />
+</LinearLayout>

@@ -1,0 +1,88 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+
+android {
+    signingConfigs {
+        mentorzkeystore {
+            keyAlias 'mentorzkeystore'
+//            storeFile file('C:\\Users\\craterzone\\Desktop\\work_space\\mintorz\\mentorzandroid\\mentorzkeystore')
+
+            storeFile file('mentorzkeystore')
+            keyPassword 'craterzone'
+            storePassword 'craterzone'
+        }
+    }
+    compileSdkVersion 26
+    buildToolsVersion '26.0.2'
+    defaultConfig {
+        applicationId "com.mentorz"
+        minSdkVersion 17
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0.2"
+//        resValue 'string', 'server', project.SERVER_IP
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            signingConfig signingConfigs.mentorzkeystore
+            zipAlignEnabled false
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+packagingOptions {
+        exclude 'META-INF/LICENSE'
+    }
+}
+
+dependencies {
+    repositories {
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+    }
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation 'com.android.support:appcompat-v7:26.0.0-beta2'
+    implementation 'com.android.support:design:26.0.0-beta2'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'com.github.salomonbrys.kotson:kotson:2.5.0'
+    implementation 'com.android.support:support-v4:26.0.0-beta2'
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation 'com.facebook.android:facebook-android-sdk:[4,5)'
+    implementation project(':linkedin-sdk')
+    implementation 'com.google.firebase:firebase-messaging:11.0.1'
+    implementation files('libs/sinch_rtc_3.8.0.jar')
+    implementation 'io.vrinda.kotlinpermissions:kotlinpermissions:1.1'
+    implementation 'com.google.android.gms:play-services-gcm:11.0.1'
+    implementation 'org.jetbrains.anko:anko-sqlite:0.10.0'
+    implementation 'com.github.Plumillon:ChipView:1.2.0'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.android.support:multidex:1.0.1'
+    implementation 'de.hdodenhof:circleimageview:2.1.0'
+    implementation 'com.google.firebase:firebase-crash:11.0.1'
+    compile 'com.pubnub:pubnub-gson:4.9.1'
+
+    compile 'com.github.rahatarmanahmed:circularprogressview:2.5.0'
+    implementation project(':diagnostics')
+}
+configurations {
+    cleanedAnnotations
+    cleanIdeaModule
+    compile.exclude group: 'org.jetbrains', module: 'anko'
+
+}
+apply plugin: 'com.google.gms.google-services'

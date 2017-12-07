@@ -1,0 +1,187 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="searchViewStyle">@style/AppTheme.SearchView</item>
+
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!--Transparent Activity-->
+    <style name="AppTheme.Transparent">
+
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <!--Button Style-->
+    <style name="CustomButton">
+        <item name="android:padding">@dimen/dp12</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">@dimen/dp14</item>
+    </style>
+
+    <!--Dialog Style-->
+    <style name="CustomDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:textCursorDrawable">@color/colorPrimary</item>
+    </style>
+
+    <style name="ratingBar" parent="@android:style/Widget.Holo.RatingBar.Small">
+        <item name="android:progressDrawable">@drawable/rating_bar</item>
+        <item name="android:minHeight">@dimen/dp15</item>
+        <item name="android:maxHeight">@dimen/dp15</item>
+    </style>
+    <style name="big_ratingBar" parent="@android:style/Widget.Holo.RatingBar">
+        <item name="android:progressDrawable">@drawable/big_rating_bar</item>
+        <item name="android:minHeight">@dimen/dp40</item>
+        <item name="android:maxHeight">@dimen/dp40</item>
+    </style>
+    <!--Text Sizes-->
+    <style name="TextStyleSmall">
+        <item name="android:textSize">@dimen/sp12</item>
+    </style>
+
+    <style name="TextStyleMedium">
+        <item name="android:textSize">@dimen/sp14</item>
+    </style>
+
+    <style name="TextStyleLarge">
+        <item name="android:textSize">@dimen/sp16</item>
+    </style>
+
+    <style name="TextStyleXLarge">
+        <item name="android:textSize">@dimen/sp18</item>
+    </style>
+
+    <style name="TextStyleXXLarge">
+        <item name="android:textSize">@dimen/sp21</item>
+    </style>
+
+    <!--Text Colors-->
+    <style name="TextStyleSmall.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="TextStyleMedium.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="TextStyleLarge.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="TextStyleXLarge.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="TextStyleSmall.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="TextStyleMedium.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="TextStyleLarge.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="TextStyleXLarge.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="TextStyleXXLarge.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="TextStyleSmall.LightGray">
+        <item name="android:textColor">@color/light_gray</item>
+    </style>
+
+    <style name="TextStyleMedium.LightGray">
+        <item name="android:textColor">@color/light_gray</item>
+    </style>
+
+    <style name="TextStyleLarge.LightGray">
+        <item name="android:textColor">@color/light_gray</item>
+    </style>
+
+    <style name="TextStyleXLarge.LightGray">
+        <item name="android:textColor">@color/light_gray</item>
+    </style>
+
+    <style name="TextStyleSmall.ColorAccent">
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <style name="TextStyleMedium.ColorAccent">
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <style name="TextStyleLarge.ColorAccent">
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <style name="TextStyleXLarge.ColorAccent">
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <!--Edit Text-->
+    <style name="TextStyleMedium.EditText" parent="Base.V7.Widget.AppCompat.EditText">
+        <item name="android:paddingLeft">@dimen/dp10</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/dp13</item>
+        <item name="android:textColorHint">@color/hint_color</item>
+        <item name="android:paddingRight">@dimen/dp10</item>
+        <item name="android:paddingBottom">@dimen/dp10</item>
+        <item name="android:paddingTop">@dimen/dp10</item>
+    </style>
+    <style name="NavigationViewStyle" parent="@style/ThemeOverlay.AppCompat.Dark">
+        <item name="android:textSize">@dimen/sp18</item> <!-- menu item text size-->
+        <item name="android:listPreferredItemHeightSmall">@dimen/dp50</item><!-- menu item height-->
+    </style>
+    <style name="UserRating" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/rating_bar</item>
+        <item name="android:minHeight">@dimen/dp15</item>
+        <item name="android:maxHeight">@dimen/dp15</item>
+    </style>
+
+
+    <style name="AppTheme.SearchView" parent="Widget.AppCompat.SearchView">
+        <item name="searchIcon">@drawable/search</item>
+        <item name="closeIcon">@drawable/close</item>
+
+    </style>
+
+    <style name="AppTheme.TranslucentNavigation" parent="AppTheme">
+        <item name="android:fitsSystemWindows">true</item>
+    </style>
+
+
+
+    <style name="Theme.AppCompat.Translucent" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+
+
+
+</resources>

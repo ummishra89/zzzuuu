@@ -1,0 +1,116 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray1"
+    tools:context="com.mentorz.messages.ChatFragment">
+    <RelativeLayout
+        android:layout_marginLeft="@dimen/dp30"
+        android:layout_marginRight="@dimen/dp30"
+        android:visibility="gone"
+        android:id="@+id/rEmptyChat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imgConnecting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp60"
+        android:src="@drawable/connecting" />
+
+
+    <com.mentorz.customviews.CustomTextView
+
+        android:id="@+id/txtFindMentor"
+        style="@style/CustomButton"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp45"
+        android:layout_below="@+id/imgConnecting"
+        android:layout_marginTop="@dimen/dp50"
+        android:background="@drawable/ripple_button"
+        android:gravity="center"
+        android:text="@string/find_a_mentor"
+        android:textAllCaps="true"
+        app:fontName="@string/roboto_regular" />
+
+    <RelativeLayout
+        android:id="@+id/layoutInviteFriends"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtFindMentor"
+        android:layout_marginTop="@dimen/dp20"
+        android:background="@drawable/ripple_facebook_button">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/txtInviteFriends"
+            android:src="@drawable/fb" />
+
+        <com.mentorz.customviews.CustomTextView
+            android:id="@+id/txtInviteFriends"
+            style="@style/CustomButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/invite_friends"
+            android:textAllCaps="true" />
+    </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rChatList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/swipeToRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </android.support.v7.widget.RecyclerView>
+        </android.support.v4.widget.SwipeRefreshLayout>
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/noSearchFound"
+        android:visibility="gone"
+        android:background="@color/light_gray1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:src="@drawable/search_big"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <com.mentorz.customviews.CustomTextView
+                android:textColor="@color/gray_dark"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp10"
+                android:textSize="@dimen/sp18"
+                android:text="@string/oops_did_not_find_anything"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </FrameLayout>
+</RelativeLayout>

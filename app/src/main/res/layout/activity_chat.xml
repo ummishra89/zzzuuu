@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/background"
+    android:layout_height="match_parent"
+    tools:context="com.mentorz.sinchvideo.ChatActivity">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:paddingBottom="@dimen/dp10"
+                    android:paddingRight="@dimen/dp50"
+                    android:paddingTop="@dimen/dp10"
+                    android:id="@+id/imgBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/back" />
+                <com.mentorz.customviews.CustomTextView
+                    android:id="@+id/txtTitle"
+                    style="@style/TextStyleXLarge.White"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Title" />
+
+                <ImageView
+                    android:layout_width="@dimen/dp100"
+                    android:visibility="gone"
+                    android:layout_height="@dimen/dp20"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/logo"
+                    android:text="Title" />
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+
+
+    </android.support.design.widget.AppBarLayout>
+    <RelativeLayout
+        android:layout_below="@+id/app_bar"
+        android:layout_above="@+id/layoutSendSMS"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </android.support.v7.widget.RecyclerView>
+
+        <com.mentorz.customviews.CustomTextView
+            android:id="@+id/emptyMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp20"
+            android:gravity="center_horizontal"
+            android:text="@string/no_message_available"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginBottom="@dimen/dp5"
+        android:layout_above="@+id/layoutBottom"
+        android:id="@+id/layoutSendSMS"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <com.mentorz.customviews.CustomEditText
+            android:maxLines="1"
+            android:id="@+id/edtMessage"
+            style="@style/TextStyleLarge.Black"
+            android:hint="@string/your_message"
+            android:layout_marginRight="@dimen/dp5"
+            android:padding="@dimen/dp5"
+            android:layout_toLeftOf="@+id/imgSend"
+            android:layout_centerVertical="true"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp50" />
+        <ImageView
+            android:padding="@dimen/dp10"
+            android:id="@+id/imgSend"
+            android:layout_marginRight="@dimen/dp10"
+            android:layout_centerVertical="true"
+            android:src="@drawable/send"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+    <RelativeLayout
+         android:id="@+id/layoutBottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp50"
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/placeVideoCall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/chat_recording" />
+
+        <ImageView
+            android:id="@+id/location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp30"
+            android:layout_toRightOf="@+id/placeVideoCall"
+            android:src="@drawable/chat_location" />
+
+        <ImageView
+
+            android:id="@+id/upload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp30"
+            android:layout_toRightOf="@+id/location"
+            android:src="@drawable/chat_upload" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/dp20">
+
+    <com.mentorz.customviews.CustomTextView
+        style="@style/TextStyleXXLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingLeft="@dimen/dp20"
+        android:paddingRight="@dimen/dp20"
+        android:text="@string/report_abuse"
+        android:textColor="@color/black"
+        app:fontName="@string/roboto_bold" />
+
+    <com.mentorz.customviews.CustomTextView
+        android:id="@+id/tv_inappropriate_content"
+        style="@style/CustomButton"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp20"
+        android:background="@drawable/rounded_corner_button"
+        android:text="@string/inappropriate_content"
+        android:textAlignment="center"
+        app:fontName="@string/roboto_regular" />
+
+    <com.mentorz.customviews.CustomTextView
+        android:id="@+id/tv_spam"
+        style="@style/CustomButton"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp20"
+        android:background="@drawable/rounded_corner_button"
+        android:text="@string/spam"
+        android:textAlignment="center"
+        app:fontName="@string/roboto_regular" />
+
+    <com.mentorz.customviews.CustomTextView
+        android:id="@+id/tv_cancel"
+        style="@style/CustomButton"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp20"
+        android:background="@drawable/rounded_corner_button"
+        android:text="@string/cancel"
+        android:textAlignment="center"
+        app:fontName="@string/roboto_regular" />
+
+</LinearLayout>
